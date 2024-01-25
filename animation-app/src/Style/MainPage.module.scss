@@ -1,0 +1,9 @@
+@import '../Style/GlobalStyle.scss';
+*{
+    font-family: $fontMontserrat;
+}
+.main{
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(to bottom right, rgba(236, 197, 250, 0.76), rgba(115, 210, 240, 0.8));
+}
