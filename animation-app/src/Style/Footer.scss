@@ -1,0 +1,50 @@
+@import '../Style/GlobalStyle.scss';
+
+.footer_box{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.button_choose{
+    width: 400px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid $red_color;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    @include text_decor($red_color,40px,400)
+}
+.button_choose2{
+    width: 400px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid $red_color;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    @include text_decor($red_color,40px,400)
+}
+
+.button_choose:hover{
+    background-color:$red_color;
+    color: white;
+}
+
+.button_choose2:hover{
+    background-color:$red_color;
+    color: white;
+}
+
+.footer_box{
+    display: flex;
+    justify-content: space-between;
+}
+.button_box{
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    // align-items:center;
+    margin: 100px 0 0 100px;
+}

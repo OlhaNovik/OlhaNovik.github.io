@@ -10,7 +10,7 @@
 
 .group_head{
     width: 325px;
-    @include text_decor(black,36px,800);
+    @include text_decor(black,36px,300);
     display: flex;
     justify-content: space-around;
     margin: 27px 25px 0px 0px;
@@ -19,6 +19,6 @@
         cursor: pointer;
     }
     p:hover{
-        color:$blue_color;
+        color:$red_color;
     }
 }

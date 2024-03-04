@@ -12,15 +12,15 @@ const Header = (props) => {
         }
     }, [props.switch]);
 
+    const handleSwitch=()=>{
+        props.setSwitch(!props.switch)
+    }
+
     return (
         <>
             <div className={s.container_header}>
-            <div className={s.logo_box}>
+            <div onClick={handleSwitch} className={s.logo_box}>
             <GlobalSvgSelector id={colorLight}/>
-            </div>
-            <div className={s.group_head}>
-            <p>Test</p>
-            <p>About us</p>
             </div>
             </div>
         </>
