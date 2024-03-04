@@ -34,8 +34,8 @@ const TriangleBlock = (props) => {
                         <path d="M10.4437 0.0082646L74.5361 44.3609L4.07936 77.6903L10.4437 0.0082646Z" fill={props.elem.color} />
                     </g>
                     <defs>
-                        <filter id="filter0_d_109_25" x="0.0793457" y="0.00830078" width="78.4568" height="85.6819" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <filter id="filter0_d_109_25" x="0.0793457" y="0.00830078" width="78.4568" height="85.6819" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
                             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                             <feOffset dy="4" />
                             <feGaussianBlur stdDeviation="2" />
