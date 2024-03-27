@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @mixin text_decor($color,$size,$weight) {
     color: $color;
@@ -6,6 +6,5 @@
     font-weight: $weight;
 }
 
-$fontMontserrat: 'Montserrat', sans-serif;
-$yellow_color:rgba(245, 206, 105, 1);
-$red_color:rgba(167, 11, 1, 1);
+$fontPlayfair: "Playfair Display", serif;
+$color_blue: #527A8A;

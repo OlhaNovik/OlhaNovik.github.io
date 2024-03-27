@@ -1,26 +1,19 @@
 import s from '../Style/Header.module.scss'
-import { useState, useEffect } from "react";
-import { GlobalSvgSelector } from "../Style/GlobalSvgSelector.jsx";
-const Header = (props) => {
-    const [colorLight,SetcoloLight] =useState('white_logo')
+import logo from '../img/book_logo.png' 
 
-    useEffect(() => {
-        if (props.switch) {
-            SetcoloLight('yellow_logo');
-        } else {
-            SetcoloLight('white_logo');
-        }
-    }, [props.switch]);
+const Header = () => {
 
-    const handleSwitch=()=>{
-        props.setSwitch(!props.switch)
-    }
 
     return (
         <>
             <div className={s.container_header}>
-            <div onClick={handleSwitch} className={s.logo_box}>
-            <GlobalSvgSelector id={colorLight}/>
+            <div className={s.container_logo}>
+                <img src={logo} alt="" />
+            </div>
+            <div className={s.container_menu}>
+                <p>Tests</p>
+                <p>About Us</p>
+
             </div>
             </div>
         </>

@@ -1,0 +1,65 @@
+@import '../Style/GlobalStyle.scss';
+
+.middle_container {
+    margin-top: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text_about {
+    width: 1200px;
+    height: 225px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 100px;
+    @include text_decor(black, 36px, 400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin: 0 95px 0 95px;
+    }
+
+    // text-align: center;
+}
+
+.line {
+    width: 1px;
+    height: 191px;
+    margin-top: 16px;
+    background-color: black;
+}
+
+.text_test {
+    width: 1011px;
+    text-align: center;
+    @include text_decor(black, 48px, 400);
+    font-family: "Playfair Display SC", serif;
+}
+
+.btn_test {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .test {
+        width: 383px;
+        height: 115px;
+        cursor: pointer;
+        background-color: $color_blue;
+        border: none;
+        @include text_decor(#DBE9F3, 40px, 400);
+        font-family: "Playfair Display SC", serif;
+    }
+}
+
+.test:hover{
+    color: $color_blue;
+    border: 3px solid $color_blue;
+    background-color: #DBE9F3;
+}

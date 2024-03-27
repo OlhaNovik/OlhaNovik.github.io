@@ -1,26 +1,52 @@
 @import '../Style/GlobalStyle.scss';
 
-.main_container{
+.main_container {
+    position: relative;
+    width: 100%;
+    height: 500px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    z-index: 2;
-}
-.group_text{
-    display: flex;
-    @include text_decor($red_color,110px,800);
-    margin: 100px 0px 0px 50px;
+    flex-direction: row;
 }
 
-.main_text{
-    @include text_decor($red_color,110px,800);
-    margin: 80px 0px 0px 27px;
+.text {
+    display: flex;
+    flex-direction: column;
+
+    .additional_text {
+        @include text_decor(black, 48px, 400);
+        margin: 0;
+        font-family: "Oooh Baby";
+        font-style: italic;
+        margin-left: 390px;
+    }
 }
-.main_text2{
-margin: 80px 0 0 0;
+
+.main_text {
+    width: 80%;
+    height: 380px;
+    margin: 0 0 0 92px;
+    z-index: 0;
+
+    p {
+        @include text_decor(black, 96px, 400);
+        margin: 15px 0 0 0;
+        font-family: "Playfair Display SC", serif;
+    }
+
 }
-.addition_text{
-    @include text_decor(black,28px,300);
-    margin: 0px 0px 0px 690px;
+
+.main_img {
+    width: 20%;
+    // margin-right: 140px;
+    img {
+        position: absolute;
+        width: 534px;
+        height: 550px;
+        transform: rotate(-20deg);
+        z-index: 2;
+        left: 850px;
+        top: 40px;
+
+    }
 
 }
