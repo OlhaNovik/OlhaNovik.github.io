@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import s from "../Style/MainPage.module.scss"
+import s from '../../Style/StyleGobal/MainPage.module.scss'
 import Middle from "./Middle";
 
 const MainPage = () => {

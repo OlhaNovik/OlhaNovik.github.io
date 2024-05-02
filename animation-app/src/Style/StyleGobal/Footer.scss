@@ -1,0 +1,22 @@
+@import '../../Style/GlobalStyle.scss';
+
+.footer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 970px;
+        height: 960px;
+    }
+}
+
+
+@media screen and (max-width: 1210px) {
+    .footer_box {
+        img{
+            width: 670px;
+            height: 660px;
+        }
+    }
+}

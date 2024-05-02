@@ -1,0 +1,42 @@
+@import '../../Style/GlobalStyle.scss';
+
+.mathpage{
+    display: flex;
+    height: 3300px;
+    justify-content: center;
+    align-items: center;
+    background-color: #C8D9E6;
+}
+
+
+.HeaderMath{
+    position: relative;
+    bottom: 1300px;
+    width: 100%;
+    height: 750px;
+    // background-repeat: no-repeat;
+    background-image: url('../../img/Math_back.png');
+}
+
+// .img_back{
+//     width: 100%;
+//     height: 590px;
+// }
+
+.test_box{
+    position: absolute;
+    width: 90%;
+    height: 2300px;
+    background-color: white;
+    border-radius: 70px;
+    top: 340px;
+    // left: 5.5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.first_test{
+    @include test_block(400px);
+}

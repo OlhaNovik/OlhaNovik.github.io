@@ -1,4 +1,4 @@
-import "../Style/FooterAnimation.scss"
+import "../../Style/StyleGobal/FooterAnimation.scss"
 
 
 const FooterAnimation = () => {

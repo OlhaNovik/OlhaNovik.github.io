@@ -1,5 +1,5 @@
-import s from "../Style/Main.module.scss"
-import mainImg from "../img/mainTest.png"
+import s from '../../Style/StyleGobal/Main.module.scss'
+import mainImg from "../../img/mainTest.png"
 
 const Main = () => {
 
@@ -14,9 +14,9 @@ const Main = () => {
                     <p className={s.additional_text}>learning can be fun</p>
                 </div>
             </div>
-        <div className={s.main_img}>
-            <img src={mainImg} alt=""/>
-        </div>
+            <img className={s.main_img} src={mainImg} alt=""/>
+        {/* <div className={s.main_img}>
+        </div> */}
 
         </div>
     )

@@ -1,0 +1,50 @@
+@import '../../Style/GlobalStyle.scss';
+
+.header_test {
+  width: 100%;
+  height: 202px;
+  background-color: $color_blue;
+  text-align: center;
+
+  p {
+    @include text_decor(white, 96px, 400);
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+.maintest {
+  height: 720px;
+  display: flex;
+  justify-content: space-around;
+  background-color: $color_back;
+
+  p{
+    margin: 110px 0 0 0;
+    padding: 0;
+    @include text_decor(black, 64px, 200)
+  }
+}
+.math_block{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 150px;
+}
+.math_photo{
+  width: 233px;
+  height: 220px;
+
+}
+.foto_logic{
+  margin-top: 200px;
+  position: relative;
+}
+.logic_photo{
+  transform: rotate(25deg);
+  position: absolute;
+  left: 150px;
+  top: -80px;
+  width: 300px;
+  height: 300px;
+}

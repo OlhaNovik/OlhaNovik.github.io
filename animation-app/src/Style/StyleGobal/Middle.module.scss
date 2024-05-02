@@ -1,18 +1,17 @@
-@import '../Style/GlobalStyle.scss';
+@import '../../Style/GlobalStyle.scss';
 
 .middle_container {
-    margin-top: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    margin-top: 300px;
 }
 
 .text_about {
-    width: 1200px;
+    width: 90%;
     height: 225px;
-    padding: 25px;
+    padding: 1%;
     background-color: white;
     border-radius: 100px;
     @include text_decor(black, 36px, 400);
@@ -62,4 +61,24 @@
     color: $color_blue;
     border: 3px solid $color_blue;
     background-color: #DBE9F3;
+}
+
+
+@media screen and (max-width: 1210px) {
+
+    .middle_container {
+        margin-top: 0;
+    }
+
+    .text_about {
+        @include text_decor(black, 25px, 400);
+        p {
+            margin: 0 45px 0 45px;
+        }
+    }
+
+    .text_test {
+        width: 90%;
+        @include text_decor(black, 25px, 400);
+    }
 }

@@ -1,5 +1,5 @@
-import s from '../Style/Middle.module.scss'
-
+import s from '../../Style/StyleGobal/Middle.module.scss'
+import { NavLink } from "react-router-dom";
 
 const Middle = () => {
 
@@ -21,7 +21,7 @@ const Middle = () => {
                 </div>
                 <div className={s.line}></div>
                 <div className={s.btn_test}>
-                    <button className={s.test}>Test now</button>
+                <NavLink to="/testpage"><button className={s.test}>Test now</button></NavLink>
                 </div>
             </div>
         </>

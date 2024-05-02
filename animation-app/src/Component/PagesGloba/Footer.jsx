@@ -1,5 +1,5 @@
-import "../Style/Footer.scss"
-import imgFooter from "../img/footer_img.png"
+import "../../Style/StyleGobal/Footer.scss"
+import imgFooter from "../../img/footer_img.png"
 
 const Footer = () => {
 
