@@ -91,6 +91,7 @@
 
     .main_text {
         margin: 0 0 0 40px;
+        
         p {
             @include text_decor(black, 45px, 400);
             margin: 15px 0 0 0;
@@ -117,18 +118,23 @@
 @media screen and (max-width: 450px) {
 
     .main_text {
-        width: 60%;
-        height: 380px;
-        margin: 0 0 0 42px;
-        z-index: 0;
-    
+        width: 80%; 
+        margin-top: 40px;
         p {
-            @include text_decor(black, 24px, 400);
+            @include text_decor(black, 28px, 400);
             margin: 15px 0 0 0;
             font-family: "Playfair Display SC", serif;
         }
     
     }
-
+    .additional_text {
+        margin-left: 45%;
+    }
+    .main_img {
+        left: 13%;
+        top: 25%;
+        width: 200px;
+        height: 210px;
+    }
 
 }

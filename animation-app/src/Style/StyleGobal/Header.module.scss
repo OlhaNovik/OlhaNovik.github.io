@@ -49,8 +49,15 @@ a{
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 450px) {
 
+    .container_menu{
+        width: 190px;
+        margin-right: 35px;
+        p{
+            font-size: 25px;
+        }
+    }
 
 }
 

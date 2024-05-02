@@ -57,7 +57,7 @@
     }
 }
 
-.test:hover{
+.test:hover {
     color: $color_blue;
     border: 3px solid $color_blue;
     background-color: #DBE9F3;
@@ -72,6 +72,7 @@
 
     .text_about {
         @include text_decor(black, 25px, 400);
+
         p {
             margin: 0 45px 0 45px;
         }
@@ -81,4 +82,27 @@
         width: 90%;
         @include text_decor(black, 25px, 400);
     }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .text_about {
+        height: 115px;
+        @include text_decor(black, 16px, 400);
+    }
+
+    .text_test {
+        @include text_decor(black, 20px, 400);
+    }
+
+    .btn_test {
+
+        .test {
+            width: 170px;
+            height: 50px;
+            @include text_decor(#DBE9F3, 20px, 400);
+        }
+    }
+
 }
