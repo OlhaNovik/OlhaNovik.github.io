@@ -8,7 +8,7 @@ const Main = () => {
         <div className={s.main_container}>
             <div className={s.text}>
                 <div className={s.main_text}>
-                    <p>Different tests for different tastes</p>
+                    <p>Different tests for different tastes.</p>
                 </div>
                 <div>
                     <p className={s.additional_text}>learning can be fun</p>
