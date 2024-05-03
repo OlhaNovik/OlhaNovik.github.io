@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const TestPage = () => {
 
     return (
-        <div className="test">
+        <div className={s.testmenu}>
             <div className={s.header_test}>
                 <p>Tests</p>
             </div>
