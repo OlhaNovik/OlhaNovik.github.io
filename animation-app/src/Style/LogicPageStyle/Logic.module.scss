@@ -124,3 +124,14 @@ span {
     display: flex;
     justify-content: center;
 }
+
+.btn_res{
+    width: 480px;
+    height: 115px;
+    background-color: #2D4191;
+    @include text_decor(white, 48px, 400);
+    text-align: center;
+    border: none;
+    margin-top: 60px;
+    cursor: pointer;
+}

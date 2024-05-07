@@ -7,7 +7,7 @@ const TestLogic = () => {
 
     const test = {
         one: "1. Виберіть номер місця, на якому стоїть автомобіль:",
-        two: "2. У ряд лежать 8 олівців різного кольору.  Синій - третій зліва. Жовтий - четвертий справа.:",
+        two: "2. У ряд лежать 8 олівців різного кольору. Синій - третій зліва. Жовтий - четвертий справа.Скільки олівців між синім і жовтим:",
         three: "3. Вкажіть правильну відповідь:",
 
     }
@@ -16,19 +16,35 @@ const TestLogic = () => {
         test1: null,
         test2: null,
         test3: null,
-    });
-
-    // Обробник зміни стану для кожного тесту
-    const handleCheckboxChange = (id, test) => {
+      });
+    
+      // Об'єкт з правильними відповідями для кожного тесту
+      const correctAnswers = {
+        test1: 'checkbox3-test1',
+        test2: 'checkbox3-test2',
+        test3: 'checkbox2-test3',
+      };
+    
+      const handleCheckboxChange = (id, test) => {
         setSelectedOptions({
-            ...selectedOptions,
-            [test]: id,
+          ...selectedOptions,
+          [test]: id,
         });
-    };
-
-    const handlePrintResults = () => {
-        console.log(selectedOptions);
-    };
+      };
+    
+      const handlePrintResults = () => {
+        // Проходимо по кожному тесту і визначаємо, чи правильна відповідь була обрана
+        for (const test in selectedOptions) {
+          const selectedOption = selectedOptions[test];
+          const correctAnswer = correctAnswers[test];
+          
+          // Перевіряємо, чи обрана відповідь є правильною
+          const isCorrect = selectedOption === correctAnswer;
+          
+          // Виводимо інформацію про правильність вибраної відповіді для поточного тесту
+          console.log(`Test ${test}: ${isCorrect ? 'Correct' : 'Incorrect'}`);
+        }
+      };
 
     return (
         <div className={s.test_box}>
@@ -236,7 +252,7 @@ const TestLogic = () => {
                     />
                 </div>
             </div>
-            <button onClick={handlePrintResults}>Print Results</button>
+            <button className={s.btn_res} onClick={handlePrintResults}>Print Results</button>
         </div>
     )
 
