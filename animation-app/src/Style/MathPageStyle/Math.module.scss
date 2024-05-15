@@ -1,6 +1,6 @@
 @import '../../Style/GlobalStyle.scss';
 
-.mathpage{
+.mathpage {
     display: flex;
     height: 3300px;
     justify-content: center;
@@ -9,7 +9,7 @@
 }
 
 
-.HeaderMath{
+.HeaderMath {
     position: relative;
     bottom: 1300px;
     width: 100%;
@@ -18,25 +18,111 @@
     background-image: url('../../img/Math_back.png');
 }
 
-// .img_back{
-//     width: 100%;
-//     height: 590px;
-// }
 
-.test_box{
+
+.test_box {
     position: absolute;
     width: 90%;
     height: 2300px;
     background-color: white;
     border-radius: 70px;
     top: 340px;
-    // left: 5.5%; 
+    @include text_decor(black, 48px, 400);
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    p {
+        margin-left: 15px;
+    }
 }
 
-.first_test{
-    @include test_block(400px);
+.first_test {
+    @include test_block(300px);
+}
+
+.two_test{
+    @include test_block(500px);
+}
+.img_test{
+    display: flex;
+    // justify-content:;
+    margin-left: 25px;
+
+}
+
+.check_container {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+.check_container2 {
+    width: 900px;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+}
+
+.var_check{
+    position: relative;
+    top: -22px;
+    left: -155px;
+}
+.var_check1{
+    position: relative;
+    top: -22px;
+    left: -15px;
+}
+
+.three_test{
+    @include test_block(700px);
+}
+
+.qw_three{
+    position: relative;
+    top: -115px;
+    left: 670px;
+}
+
+.check_container3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn_res {
+    width: 480px;
+    height: 115px;
+    background-color: #2D4191;
+    @include text_decor(white, 48px, 400);
+    text-align: center;
+    border: none;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+
+.block_icon_one {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -35px;
+    left: -20px;
+}
+
+.block_icon_two {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -35px;
+    left: -20px;
+}
+
+.block_icon_three {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -35px;
+    left: -20px;
 }

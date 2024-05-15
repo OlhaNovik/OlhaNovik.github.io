@@ -1,7 +1,7 @@
 import s from '../../Style/LogicPageStyle/Logic.module.scss'
 import qwOne from '../../img/que_one_logic.png'
 import React, { useState } from 'react';
-import Checkbox from './CheckBox';
+import Checkbox from '../CheckBox';
 
 const TestLogic = () => {
 
@@ -12,43 +12,61 @@ const TestLogic = () => {
 
     }
 
+    const test_correct = {
+        incorrect: <svg width="70" height="70" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.07179 0L0 3.07179L36.9282 40L0 76.9282L3.07179 80L40 43.0718L76.9282 80L80 76.9282L43.0718 40L80 3.07179L76.9282 0L40 36.9282L3.07179 0Z" fill="#BE0D0D" />
+        </svg>,
+        correct: <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M83.8749 17.2499C82.5468 17.2968 81.328 17.9999 80.6249 19.1249L42.9999 76.6874L18.6249 55.6249C17.578 54.539 16.0077 54.1328 14.5624 54.5859C13.1249 55.0312 12.0546 56.2499 11.8046 57.7343C11.5546 59.2265 12.1562 60.7265 13.3749 61.6249L41.2499 85.7499C42.1249 86.4921 43.2812 86.8203 44.414 86.6562C45.5546 86.4843 46.5624 85.8359 47.1874 84.8749L87.3749 23.4999C88.2343 22.2421 88.3046 20.6171 87.5624 19.289C86.8202 17.9687 85.3905 17.1796 83.8749 17.2499Z" fill="#33712D" />
+        </svg>
+    }
+
     const [selectedOptions, setSelectedOptions] = useState({
         test1: null,
         test2: null,
         test3: null,
-      });
-    
-      // Об'єкт з правильними відповідями для кожного тесту
-      const correctAnswers = {
+    });
+
+    // Об'єкт з правильними відповідями для кожного тесту
+    const correctAnswers = {
         test1: 'checkbox3-test1',
         test2: 'checkbox3-test2',
         test3: 'checkbox2-test3',
-      };
-    
-      const handleCheckboxChange = (id, test) => {
+    };
+
+    const handleCheckboxChange = (id, test) => {
         setSelectedOptions({
-          ...selectedOptions,
-          [test]: id,
+            ...selectedOptions,
+            [test]: id,
         });
-      };
-    
-      const handlePrintResults = () => {
+    };
+
+    const [showResults, setShowResults] = useState(false);
+
+    const handlePrintResults = () => {
         // Проходимо по кожному тесту і визначаємо, чи правильна відповідь була обрана
         for (const test in selectedOptions) {
-          const selectedOption = selectedOptions[test];
-          const correctAnswer = correctAnswers[test];
-          
-          // Перевіряємо, чи обрана відповідь є правильною
-          const isCorrect = selectedOption === correctAnswer;
-          
-          // Виводимо інформацію про правильність вибраної відповіді для поточного тесту
-          console.log(`Test ${test}: ${isCorrect ? 'Correct' : 'Incorrect'}`);
+            const selectedOption = selectedOptions[test];
+            const correctAnswer = correctAnswers[test];
+
+            // Перевіряємо, чи обрана відповідь є правильною
+            const isCorrect = selectedOption === correctAnswer;
+
+            // Виводимо інформацію про правильність вибраної відповіді для поточного тесту
+            console.log(`Test ${test}: ${isCorrect ? 'Correct' : 'Incorrect'}`);
+            setShowResults(true);
         }
-      };
+    };
 
     return (
         <div className={s.test_box}>
             <div className={s.first_test}>
+                {showResults && (
+                    <div className={s.block_icon_one}>
+                        {selectedOptions.test1 === correctAnswers.test1 ? test_correct.correct : test_correct.incorrect}
+                    </div>
+                )}
+
                 <div className={s.head_one}><p>{test.one}</p></div>
                 <div className={s.box_one}> <img src={qwOne} alt="#" /> </div>
 
@@ -81,7 +99,15 @@ const TestLogic = () => {
                 </div>
             </div>
 
-            <div className={s.two_test}><div className={s.head_two}><p>{test.two}</p> </div>
+            <div className={s.two_test}>
+
+                {showResults && (
+                    <div className={s.block_icon_two}>
+                        {selectedOptions.test2 === correctAnswers.test2 ? test_correct.correct : test_correct.incorrect}
+                    </div>
+                )}
+                <div className={s.head_two}><p>{test.two}</p> </div>
+
                 <div className={s.two_container}>
                     <div className={s.check_container2}>
                         <Checkbox
@@ -198,7 +224,14 @@ const TestLogic = () => {
                 </div>
 
             </div>
-            <div className={s.three_test}><div className={s.head_three}><p>{test.three}</p> </div>
+            <div className={s.three_test}>
+                {showResults && (
+                    <div className={s.block_icon_three}>
+                        {selectedOptions.test3 === correctAnswers.test3 ? test_correct.correct : test_correct.incorrect}
+                    </div>
+                )}
+
+                <div className={s.head_three}><p>{test.three}</p> </div>
                 <div className={s.three_img}>
                     <svg width="660" height="340" viewBox="0 0 660 340" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M628.941 216.75H566.824C558.247 216.75 551.294 224.361 551.294 233.75V301.75C551.294 311.139 558.247 318.75 566.824 318.75H628.941C637.518 318.75 644.471 311.139 644.471 301.75V233.75C644.471 224.361 637.518 216.75 628.941 216.75Z" fill="#FFEACC" />
