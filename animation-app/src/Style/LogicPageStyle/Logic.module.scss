@@ -18,6 +18,20 @@
     background-image: url('../../img/Logic_back.png');
 }
 
+.exit_container {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 125px;
+    height: 115px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 span {
     @include text_decor(black, 48px, 400);
     font-family: $fontPlayfairCD;
@@ -169,10 +183,14 @@ span {
 
 
 @media screen and (max-width: 450px) {
+    .logicpage {
+        height: 1100px;
+    }
 
     .test_box {
         top: 85px;
         border-radius: 35px;
+        height: 1000px;
 
         p {
             @include text_decor(black, 15px, 400);
@@ -186,9 +204,11 @@ span {
     .two_test {
         @include test_block(250px);
     }
+
     .three_test {
         @include test_block(190px);
     }
+
     .box_one {
 
         img {
@@ -220,6 +240,7 @@ span {
             height: 15px;
         }
     }
+
     .check_container2 {
 
         span {
@@ -235,25 +256,71 @@ span {
     .headermath {
         background-image: url('../../img/Logic_back_mob.png');
         background-repeat: no-repeat;
+        bottom: 300px;
 
     }
+
     .img_cont {
         width: 370px;
         top: -10px;
-        svg{
+
+        svg {
             width: 25px;
             height: 90px;
         }
     }
-    .three_img{
-        svg{
+
+    .three_img {
+        svg {
             width: 177px;
             height: 87px;
         }
     }
-    .btn_res{
+
+    .btn_res {
         width: 145px;
         height: 45px;
         @include text_decor(white, 20px, 400);
+    }
+
+    .exit_container {
+        width: 45px;
+        height: 46px;
+
+        svg {
+            width: 25px;
+            height: 23px;
+        }
+
+    }
+
+    .block_icon_one {
+        svg {
+            width: 26px;
+            height: 28px;
+        }
+
+        top: 0;
+        left: 0;
+    }
+
+    .block_icon_two {
+        top: 0;
+        left: 0;
+
+        svg {
+            width: 26px;
+            height: 28px;
+        }
+    }
+
+    .block_icon_three {
+        top: 0;
+        left: 0;
+
+        svg {
+            width: 26px;
+            height: 28px;
+        }
     }
 }

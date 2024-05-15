@@ -14,10 +14,22 @@
     bottom: 1300px;
     width: 100%;
     height: 750px;
-    // background-repeat: no-repeat;
     background-image: url('../../img/Math_back.png');
 }
 
+.exit_container {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 125px;
+    height: 115px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
 
 .test_box {
@@ -41,10 +53,11 @@
     @include test_block(300px);
 }
 
-.two_test{
+.two_test {
     @include test_block(500px);
 }
-.img_test{
+
+.img_test {
     display: flex;
     // justify-content:;
     margin-left: 25px;
@@ -56,6 +69,7 @@
     display: flex;
     justify-content: space-around;
 }
+
 .check_container2 {
     width: 900px;
     margin-top: 3%;
@@ -65,22 +79,23 @@
     top: 130px;
 }
 
-.var_check{
+.var_check {
     position: relative;
     top: -22px;
     left: -155px;
 }
-.var_check1{
+
+.var_check1 {
     position: relative;
     top: -22px;
     left: -15px;
 }
 
-.three_test{
+.three_test {
     @include test_block(700px);
 }
 
-.qw_three{
+.qw_three {
     position: relative;
     top: -115px;
     left: 670px;
@@ -125,4 +140,92 @@
     position: relative;
     top: -35px;
     left: -20px;
+}
+
+@media screen and (max-width: 450px) {
+
+    .HeaderMath {
+        background-image: url('../../img/Math_back_mobile.png');
+        background-repeat: no-repeat;
+    }
+
+    .test_box {
+        top: 130px;
+        border-radius: 35px;
+        height: 1000px;
+
+        p {
+            @include text_decor(black, 15px, 400);
+            margin: 15px 0 0 15px;
+
+        }
+    }
+
+    .first_test {
+        @include test_block(150px);
+    }
+
+    .two_test {
+        @include test_block(150px);
+    }
+
+    .three_test {
+        @include test_block(190px);
+    }
+
+    .check_container {
+
+        span {
+            @include text_decor(black, 15px, 400)
+        }
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .check_container2 {
+        top: 0;
+        span {
+            @include text_decor(black, 15px, 400)
+        }
+
+        svg {   
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .img_test{
+        margin: 0;
+    }
+    .img_graf {
+        svg {
+            width: 100px;
+            height: 140px;
+        }
+    }
+
+    .check_container3 {
+
+        span {
+            @include text_decor(black, 15px, 400)
+        }
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .exit_container {
+        width: 45px;
+        height: 46px;
+
+        svg {
+            width: 25px;
+            height: 23px;
+        }
+
+    }
 }
