@@ -97,15 +97,23 @@
 
 .qw_three {
     position: relative;
-    top: -115px;
+    top: -15px;
     left: 670px;
 }
 
-.check_container3 {
+// .check_container3 {
+//     display: flex;
+//     justify-content: space-around;
+// }
+.cont_variant{
     display: flex;
     justify-content: space-around;
 }
 
+.container_graf{
+    display: flex;
+    justify-content: space-around;
+}
 .btn_res {
     width: 480px;
     height: 115px;
@@ -120,7 +128,7 @@
 
 .block_icon_one {
     width: 50px;
-    height: 50px;
+    height: 15px;
     position: relative;
     top: -35px;
     left: -20px;
@@ -128,7 +136,7 @@
 
 .block_icon_two {
     width: 50px;
-    height: 50px;
+    height: 15px;
     position: relative;
     top: -35px;
     left: -20px;
@@ -136,23 +144,35 @@
 
 .block_icon_three {
     width: 50px;
-    height: 50px;
+    height: 15px;
     position: relative;
     top: -35px;
     left: -20px;
 }
 
+.head_one{
+    width: 100%;
+    height: 100px;
+}
+.head_three{
+    width: 100%;
+    height: 5px;
+}
 @media screen and (max-width: 450px) {
+    .mathpage {
+        height: 1000px;
+    }
 
     .HeaderMath {
         background-image: url('../../img/Math_back_mobile.png');
         background-repeat: no-repeat;
+        bottom: 250px;
     }
 
     .test_box {
         top: 130px;
         border-radius: 35px;
-        height: 1000px;
+        height: 800px;
 
         p {
             @include text_decor(black, 15px, 400);
@@ -170,7 +190,7 @@
     }
 
     .three_test {
-        @include test_block(190px);
+        @include test_block(200px);
     }
 
     .check_container {
@@ -186,27 +206,47 @@
     }
 
     .check_container2 {
-        top: 0;
+        width: 300px;
+        top: -50px;
+        height: 50px;
         span {
             @include text_decor(black, 15px, 400)
         }
 
-        svg {   
+        svg {
             width: 15px;
             height: 15px;
         }
+        .var_check1{
+            top: 0;
+            left: -10px;
+            svg{
+                width: 22px;
+                height: 22px;
+            }
+        }
     }
-    .img_test{
+
+    .img_test {
         margin: 0;
-    }
-    .img_graf {
-        svg {
-            width: 100px;
-            height: 140px;
-        }
+        display: flex;
+        flex-direction: column ;
     }
 
+    .img_graf {
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        svg {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    .head_one{
+        height: 25px;
+    }
     .check_container3 {
+        height: 300px;
 
         span {
             @include text_decor(black, 15px, 400)
@@ -215,12 +255,46 @@
         svg {
             width: 15px;
             height: 15px;
+        }
+    }
+
+    .graf_one {
+        svg {
+            width: 80px;
+            height: 80px;
+        }
+
+    }
+    .graf_two {
+        svg {
+            width: 80px;
+            height: 80px;
+        }
+
+    }
+    .graf_three {
+        svg {
+            width: 80px;
+            height: 80px;
+        }
+
+    }
+    .qw_three{
+        position: relative;
+        top: -27px;
+        left: 220px;
+        height: 30px;
+        svg{
+            width: 40px;
+            height: 40px;
         }
     }
 
     .exit_container {
         width: 45px;
         height: 46px;
+        top: 140px;
+        left: 25px;
 
         svg {
             width: 25px;
@@ -228,4 +302,45 @@
         }
 
     }
+
+    .cont_variant{
+        display: flex;        
+    }
+    
+    .btn_res {
+        width: 145px;
+        height: 45px;
+        @include text_decor(white, 20px, 400);
+    }
+
+    .block_icon_one {
+        svg {
+            width: 26px;
+            height: 28px;
+        }
+
+        top: -25px;
+        left: 0;
+    }
+
+    .block_icon_two {
+        top: 0;
+        left: 0;
+
+        svg {
+            width: 26px;
+            height: 28px;
+        }
+    }
+
+    .block_icon_three {
+        top: 0;
+        left: 0;
+
+        svg {
+            width: 26px;
+            height: 28px;
+        }
+    }
+    
 }
