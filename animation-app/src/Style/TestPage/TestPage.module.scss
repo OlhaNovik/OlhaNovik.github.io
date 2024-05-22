@@ -23,7 +23,7 @@
   p {
     margin: 110px 0 0 0;
     padding: 0;
-    @include text_decor(black, 64px, 200)
+    @include text_decor(black, 48px, 200)
   }
 }
 
@@ -52,6 +52,8 @@
   width: 300px;
   height: 300px;
 }
+
+
 
 @media screen and (max-width: 800px) {
   .header_test {

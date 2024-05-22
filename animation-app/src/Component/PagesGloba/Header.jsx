@@ -5,7 +5,26 @@ import React, { useEffect, useRef } from 'react';
 import anime from 'animejs';
 
 const Header = () => {
+    const textRefTests = useRef(null);
+    const textRefAbout = useRef(null);
 
+    const handleMouseEnter = (ref) => {
+        anime({
+            targets: ref.current,
+            scale: 1.2,
+            duration: 500,
+            easing: 'easeInOutQuad'
+        });
+    };
+
+    const handleMouseLeave = (ref) => {
+        anime({
+            targets: ref.current,
+            scale: 1,
+            duration: 500,
+            easing: 'easeInOutQuad'
+        });
+    };
 
     return (
         <>
@@ -17,10 +36,29 @@ const Header = () => {
                     </svg>
                 </div>
                 <div className={s.container_menu}>
-                    <NavLink to="/testpage"><p className={s.testpage}>Tests</p></NavLink>
-                    <NavLink to="/pageAbout"><p>About Us</p></NavLink>
+                    <NavLink to="/testpage"> <p className={s.testpage}
+                        ref={textRefTests}
+                        onMouseEnter={() => handleMouseEnter(textRefTests)}
+                        onMouseLeave={() => handleMouseLeave(textRefTests)}
+                        style={{
+                            display
+                                : 'inline-block', cursor: 'pointer'
+                        }}
+                    >
+                        Tests
+                    </p></NavLink>
+                    {/* <NavLink to="/testpage"><p className={s.testpage}>Tests</p></NavLink> */}
+                    <NavLink to="/pageAbout"><p
+                        ref={textRefAbout}
+                        onMouseEnter={() => handleMouseEnter(textRefAbout)}
+                        onMouseLeave={() => handleMouseLeave(textRefAbout)}
+                        style={{
+                            display
+                                : 'inline-block', cursor: 'pointer'
+                        }}
+                    >  About Us</p></NavLink>
                 </div>
-            </div>
+            </div >
         </>
     )
 

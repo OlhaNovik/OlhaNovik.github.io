@@ -30,14 +30,18 @@
     width: 1px;
     height: 191px;
     margin-top: 16px;
+    margin-bottom: 85px;
     background-color: black;
 }
 
 .text_test {
-    width: 1011px;
+    width: 1051px;
+    // height: 500px;
     text-align: center;
     @include text_decor(black, 48px, 400);
     font-family: "Playfair Display SC", serif;
+    display: inline-block;
+    animation: slide-up 2s infinite;
 }
 
 .btn_test {
@@ -62,6 +66,17 @@
     border: 3px solid $color_blue;
     background-color: #DBE9F3;
 }
+
+span {
+    display: inline-block;
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
+
 
 
 @media screen and (max-width: 1210px) {

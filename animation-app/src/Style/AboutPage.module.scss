@@ -1,0 +1,37 @@
+@import '../Style/GlobalStyle.scss';
+
+.aboutpage {
+    height: 2000px;
+    background-color: #DBE9F3;
+    p {
+        margin: 0 0 0 20px;
+        @include text_decor(black, 64px, 400);
+    }
+    overflow: hidden;
+}
+
+.header_cont {
+    display: flex;
+    height: 230px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.text_with_icon {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.icon_hello {
+    margin-left: 8px;
+    width: 1em;
+    height: auto;
+}
+
+.text_with_img {
+    display: flex;
+    margin-bottom: 100px;
+}

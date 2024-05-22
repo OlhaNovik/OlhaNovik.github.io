@@ -1,9 +1,18 @@
 import s from '../../Style/LogicPageStyle/Logic.module.scss'
 import qwOne from '../../img/que_one_logic.png'
-import React, { useState } from 'react';
+import React, { useState,useRef,useEffect } from 'react';
 import Checkbox from '../CheckBox';
+import SubmitButton from '../Pagelogic/ButtonAnimation'
+import anime from 'animejs';
 
 const TestLogic = () => {
+    const [showResults, setShowResults] = useState(false);
+    const [isCorrect, setIsCorrect] = useState(false);
+    const [selectedOptions, setSelectedOptions] = useState({
+        test1: null,
+        test2: null,
+        test3: null,
+    });
 
     const test = {
         one: "1. Виберіть номер місця, на якому стоїть автомобіль:",
@@ -21,12 +30,11 @@ const TestLogic = () => {
         </svg>
     }
 
-    const [selectedOptions, setSelectedOptions] = useState({
-        test1: null,
-        test2: null,
-        test3: null,
-    });
+    const test1Ref = useRef(null);
+    const test2Ref = useRef(null);
+    const test3Ref = useRef(null);
 
+   
     // Об'єкт з правильними відповідями для кожного тесту
     const correctAnswers = {
         test1: 'checkbox3-test1',
@@ -41,28 +49,89 @@ const TestLogic = () => {
         });
     };
 
-    const [showResults, setShowResults] = useState(false);
+    // Отримання позиції елементу на екрані
+    const isElementInViewport = (element) => {
+        if (!element) return false; // Додайте перевірку на null
+    
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (showResults) return; // Анімація буде відтворюватися лише один раз після показу результатів
+
+            if (isElementInViewport(test1Ref.current)) {
+                const svgElement = test1Ref.current.querySelector('path');
+                anime({
+                    targets: svgElement,
+                    strokeDasharray: [anime.setDashoffset, anime.setDashoffset],
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    easing: 'easeInOutSine',
+                    duration: 1000,
+                    delay: 500,
+                    fill: 'transparent',
+                    stroke: "#33712D",
+                });
+            }
+            if (isElementInViewport(test2Ref.current)) {
+                const svgElement = test2Ref.current.querySelector('path');
+                anime({
+                    targets: svgElement,
+                    strokeDasharray: [anime.setDashoffset, anime.setDashoffset],
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    easing: 'easeInOutSine',
+                    duration: 1000,
+                    delay: 500,
+                    fill: 'transparent',
+                    stroke: "#33712D",
+                });
+            }
+            if (isElementInViewport(test3Ref.current)) {
+                const svgElement = test3Ref.current.querySelector('path');
+                anime({
+                    targets: svgElement,
+                    strokeDasharray: [anime.setDashoffset, anime.setDashoffset],
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    easing: 'easeInOutSine',
+                    duration: 1000,
+                    delay: 500,
+                    fill: 'transparent',
+                    stroke: "#33712D",
+                });
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [showResults, test1Ref, test2Ref, test3Ref]);
+
 
     const handlePrintResults = () => {
-        // Проходимо по кожному тесту і визначаємо, чи правильна відповідь була обрана
+        const newResults = {};
         for (const test in selectedOptions) {
             const selectedOption = selectedOptions[test];
             const correctAnswer = correctAnswers[test];
-
-            // Перевіряємо, чи обрана відповідь є правильною
             const isCorrect = selectedOption === correctAnswer;
-
-            // Виводимо інформацію про правильність вибраної відповіді для поточного тесту
-            console.log(`Test ${test}: ${isCorrect ? 'Correct' : 'Incorrect'}`);
-            setShowResults(true);
+            newResults[test] = isCorrect;
         }
+        setIsCorrect(newResults); // Припускаємо, що показуємо результат лише для першого тесту для демонстрації
+        setShowResults(true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
         <div className={s.test_box}>
             <div className={s.first_test}>
                 {showResults && (
-                    <div className={s.block_icon_one}>
+                    <div className={s.block_icon_one} ref={test1Ref}>
                         {selectedOptions.test1 === correctAnswers.test1 ? test_correct.correct : test_correct.incorrect}
                     </div>
                 )}
@@ -102,7 +171,7 @@ const TestLogic = () => {
             <div className={s.two_test}>
 
                 {showResults && (
-                    <div className={s.block_icon_two}>
+                    <div className={s.block_icon_two} ref={test2Ref}>
                         {selectedOptions.test2 === correctAnswers.test2 ? test_correct.correct : test_correct.incorrect}
                     </div>
                 )}
@@ -226,7 +295,7 @@ const TestLogic = () => {
             </div>
             <div className={s.three_test}>
                 {showResults && (
-                    <div className={s.block_icon_three}>
+                    <div className={s.block_icon_three} ref={test3Ref}>
                         {selectedOptions.test3 === correctAnswers.test3 ? test_correct.correct : test_correct.incorrect}
                     </div>
                 )}
@@ -285,6 +354,7 @@ const TestLogic = () => {
                     />
                 </div>
             </div>
+            {/* <SubmitButton /> */}
             <button className={s.btn_res} onClick={handlePrintResults}>Print Results</button>
         </div>
     )

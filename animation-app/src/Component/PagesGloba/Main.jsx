@@ -108,9 +108,6 @@ c-17 -32 -1 -41 18 -11 26 41 141 152 151 145 6 -3 -1 -28 -14 -58 -30 -64
 17 4 22 -6 2 0 25 15 58 34 73 33 95 -4 82z"  stroke="black" strokeWidth="7" fill='none'/>
                             </g>
                         </svg>
-
-                        {/* learning can be fun */}
-
                     </p>
                 </div>
             </div>
