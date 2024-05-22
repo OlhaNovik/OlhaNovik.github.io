@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.35dfa858.css",
-    "main.js": "/static/js/main.6d5c1ad4.js",
+    "main.css": "/static/css/main.419c61a7.css",
+    "main.js": "/static/js/main.dec0f2bb.js",
     "static/js/787.e8e9ca0f.chunk.js": "/static/js/787.e8e9ca0f.chunk.js",
     "static/media/footer_img.png": "/static/media/footer_img.8810206587601d4afcc2.png",
     "static/media/math_logo.png": "/static/media/math_logo.2543482212bfe693e05e.png",
@@ -10,15 +10,16 @@
     "static/media/Math_back.png": "/static/media/Math_back.1ac44442974f9ebd6c5f.png",
     "static/media/mainTest.png": "/static/media/mainTest.0785682227793f7b43d5.png",
     "static/media/Math_back_mobile.png": "/static/media/Math_back_mobile.3148041edfb61fdd3a01.png",
+    "static/media/AboutUs.png": "/static/media/AboutUs.37eaf9f87679e4b448d7.png",
     "static/media/Logic_back_mob.png": "/static/media/Logic_back_mob.70241ae7bcb74d49dcb7.png",
     "static/media/que_one_logic.png": "/static/media/que_one_logic.2d34815f7099a7a08929.png",
     "index.html": "/index.html",
-    "main.35dfa858.css.map": "/static/css/main.35dfa858.css.map",
-    "main.6d5c1ad4.js.map": "/static/js/main.6d5c1ad4.js.map",
+    "main.419c61a7.css.map": "/static/css/main.419c61a7.css.map",
+    "main.dec0f2bb.js.map": "/static/js/main.dec0f2bb.js.map",
     "787.e8e9ca0f.chunk.js.map": "/static/js/787.e8e9ca0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35dfa858.css",
-    "static/js/main.6d5c1ad4.js"
+    "static/css/main.419c61a7.css",
+    "static/js/main.dec0f2bb.js"
   ]
 }
