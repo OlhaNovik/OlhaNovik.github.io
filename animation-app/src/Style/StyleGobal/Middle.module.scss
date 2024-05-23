@@ -109,6 +109,9 @@ span {
 
     .text_test {
         @include text_decor(black, 20px, 400);
+        span{
+            font-size: 20px;
+        }
     }
 
     .btn_test {

@@ -2,7 +2,7 @@
 
 .mathpage {
     display: flex;
-    height: 3300px;
+    height: 2000px;
     justify-content: center;
     align-items: center;
     background-color: #C8D9E6;
@@ -11,20 +11,17 @@
 
 .HeaderMath {
     position: relative;
-    bottom: 1300px;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 900px;
     width: 100%;
-    height: 750px;
-    background-image: url('../../img/Math_back.png');
+    height: 150px;
 }
 
 .exit_container {
     position: relative;
-    top: 50px;
-    left: 50px;
     width: 125px;
     height: 115px;
-    border-radius: 50%;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,10 +32,9 @@
 .test_box {
     position: absolute;
     width: 90%;
-    height: 2300px;
-    background-color: white;
+    height: 1800px;
     border-radius: 70px;
-    top: 340px;
+    top: 150px;
     @include text_decor(black, 48px, 400);
     display: flex;
     flex-direction: column;
@@ -51,10 +47,51 @@
 
 .first_test {
     @include test_block(300px);
+    border-left: 35px #527A8A solid;
+    border-top: 35px #527A8A solid;
+    transition: border 1s ease-in-out;
+}
+
+.correctBorder1 {
+    @include test_block(300px); 
+    border-left: 35px #98C194 solid;
+    border-top: 35px #98C194 solid;/* Зміна кольору бордера для правильних відповідей */
+}
+
+.incorrectBorder1 {
+    @include test_block(300px);
+    border-left: 35px #DD7474 solid;
+    border-top: 35px #DD7474 solid; /* Зміна кольору бордера для неправильних відповідей */
+}
+
+.correctBorder2 {
+    @include test_block(500px); 
+    border-right: 35px #98C194 solid;
+    border-top: 35px #98C194 solid;/* Зміна кольору бордера для правильних відповідей */
+}
+
+.incorrectBorder2 {
+    @include test_block(500px);
+    border-right: 35px #DD7474 solid;
+    border-top: 35px #DD7474 solid; /* Зміна кольору бордера для неправильних відповідей */
+}
+
+.correctBorder3 {
+    @include test_block(550px); 
+    border-left: 35px #98C194 solid;
+    border-top: 35px #98C194 solid;/* Зміна кольору бордера для правильних відповідей */
+}
+
+.incorrectBorder3 {
+    @include test_block(550px);
+    border-left: 35px #DD7474 solid;
+    border-top: 35px #DD7474 solid; /* Зміна кольору бордера для неправильних відповідей */
 }
 
 .two_test {
     @include test_block(500px);
+    border-right: 35px #527A8A solid;
+    border-top: 35px #527A8A solid;
 }
 
 .img_test {
@@ -92,7 +129,9 @@
 }
 
 .three_test {
-    @include test_block(700px);
+    @include test_block(550px);
+    border-left: 35px #527A8A solid;
+    border-top: 35px #527A8A solid;
 }
 
 .qw_three {
@@ -117,7 +156,7 @@
 .btn_res {
     width: 480px;
     height: 115px;
-    background-color: #2D4191;
+    background-color: $color_blue;
     @include text_decor(white, 48px, 400);
     text-align: center;
     border: none;

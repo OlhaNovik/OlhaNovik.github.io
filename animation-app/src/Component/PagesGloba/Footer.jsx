@@ -33,7 +33,7 @@ const Footer = () => {
       ref={imageRef}
       src={imgFooter}
       alt="Animated"
-      style={{ width: '970px', height: '960px', transition: 'transform 0.2s' }}
+      style={{ transition: 'transform 0.2s' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     />

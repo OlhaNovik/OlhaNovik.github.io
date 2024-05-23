@@ -7,11 +7,13 @@
 }
 
 @mixin test_block($height) {
-    border-radius: 40px;
+    border-radius: 70px;
     width: 90%;
     height: $height;
-    background-color: #C8D9E6;
+    background-color: white;
     margin-top: 50px;
+    // border: 10px red solid;
+    
 
 }
 $fontPlayfair: "Playfair Display", serif;
