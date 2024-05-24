@@ -45,13 +45,33 @@
     }
 }
 
-.first_test {
+// .first_test {
+//     @include test_block(300px);
+//     border-left: 35px #527A8A solid;
+//     border-top: 35px #527A8A solid;
+//     transition: border 1s ease-in-out;
+// }
+.test1{
     @include test_block(300px);
     border-left: 35px #527A8A solid;
     border-top: 35px #527A8A solid;
     transition: border 1s ease-in-out;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+.test2 {
+    @include test_block(500px);
+    border-right: 35px #527A8A solid;
+    border-top: 35px #527A8A solid;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.test3 {
+    @include test_block(550px);
+    border-left: 35px #527A8A solid;
+    border-top: 35px #527A8A solid;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
 .correctBorder1 {
     @include test_block(300px); 
     border-left: 35px #98C194 solid;
@@ -88,11 +108,7 @@
     border-top: 35px #DD7474 solid; /* Зміна кольору бордера для неправильних відповідей */
 }
 
-.two_test {
-    @include test_block(500px);
-    border-right: 35px #527A8A solid;
-    border-top: 35px #527A8A solid;
-}
+
 
 .img_test {
     display: flex;
@@ -128,11 +144,7 @@
     left: -15px;
 }
 
-.three_test {
-    @include test_block(550px);
-    border-left: 35px #527A8A solid;
-    border-top: 35px #527A8A solid;
-}
+
 
 .qw_three {
     position: relative;
@@ -203,13 +215,12 @@
     }
 
     .HeaderMath {
-        background-image: url('../../img/Math_back_mobile.png');
         background-repeat: no-repeat;
-        bottom: 250px;
+        bottom: 420px;
     }
 
     .test_box {
-        top: 130px;
+        top: 0px;
         border-radius: 35px;
         height: 800px;
 
@@ -220,16 +231,22 @@
         }
     }
 
-    .first_test {
-        @include test_block(150px);
+    .test1 {
+        @include test_block(250px);
+        border-left: 15px #527A8A solid;
+    border-top: 15px #527A8A solid;
     }
 
-    .two_test {
-        @include test_block(150px);
+    .test2 {
+        @include test_block(250px);
+        border-right: 15px #527A8A solid;
+    border-top: 15px #527A8A solid;
     }
 
-    .three_test {
+    .test3 {
         @include test_block(200px);
+        border-left: 15px #527A8A solid;
+    border-top: 15px #527A8A solid;
     }
 
     .check_container {
@@ -332,12 +349,10 @@
     .exit_container {
         width: 45px;
         height: 46px;
-        top: 140px;
-        left: 25px;
 
         svg {
-            width: 25px;
-            height: 23px;
+            width: 35px;
+            height: 33px;
         }
 
     }
@@ -348,7 +363,7 @@
     
     .btn_res {
         width: 145px;
-        height: 45px;
+        height: 65px;
         @include text_decor(white, 20px, 400);
     }
 
@@ -382,4 +397,40 @@
         }
     }
     
+
+    .correctBorder1 {
+        @include test_block(200px); 
+        border-left: 15px #98C194 solid;
+        border-top: 15px #98C194 solid;/* Зміна кольору бордера для правильних відповідей */
+    }
+    
+    .incorrectBorder1 {
+        @include test_block(200px);
+        border-left: 15px #DD7474 solid;
+        border-top: 15px #DD7474 solid; /* Зміна кольору бордера для неправильних відповідей */
+    }
+    
+    .correctBorder2 {
+        @include test_block(250px); 
+        border-right: 15px #98C194 solid;
+        border-top: 15px #98C194 solid;/* Зміна кольору бордера для правильних відповідей */
+    }
+    
+    .incorrectBorder2 {
+        @include test_block(250px);
+        border-right: 15px #DD7474 solid;
+        border-top: 15px #DD7474 solid; /* Зміна кольору бордера для неправильних відповідей */
+    }
+    
+    .correctBorder3 {
+        @include test_block(200px); 
+        border-left: 15px #98C194 solid;
+        border-top: 15px #98C194 solid;/* Зміна кольору бордера для правильних відповідей */
+    }
+    
+    .incorrectBorder3 {
+        @include test_block(200px);
+        border-left: 15px #DD7474 solid;
+        border-top: 15px #DD7474 solid; /* Зміна кольору бордера для неправильних відповідей */
+    }
 }

@@ -8,6 +8,7 @@ import anime from 'animejs';
 const TestMath = () => {
 
     const [showResults, setShowResults] = useState(false);
+    const [isCorrect, setIsCorrect] = useState(false);
     const test = {
         one: "1.Вкажіть парну функцію:",
         two: "2.Вкажіть функцію з рисунку:",
@@ -50,8 +51,6 @@ const TestMath = () => {
         }
     }, [showResults, selectedOptions, correctAnswers]);
 
-
-
     const handleCheckboxChange = (id, test) => {
         setSelectedOptions({
             ...selectedOptions,
@@ -73,6 +72,7 @@ const TestMath = () => {
             // Виводимо інформацію про правильність вибраної відповіді для поточного тесту
             console.log(`Test ${test}: ${isCorrect ? 'Correct' : 'Incorrect'}`);
             setShowResults(true);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
