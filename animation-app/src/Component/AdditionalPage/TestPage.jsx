@@ -1,6 +1,6 @@
-import s from "../Style/TestPage/TestPage.module.scss"
-import logoMath from '../img/math_logo.png'
-import logoLogic from '../img/logic_img.png'
+import s from "../../Style/TestPage/TestPage.module.scss"
+import logoMath from '../../img/math_logo.png'
+import logoLogic from '../../img/logic_img.png'
 import { NavLink } from "react-router-dom";
 import React, { useEffect, useRef } from 'react';
 import anime from 'animejs';

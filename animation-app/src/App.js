@@ -1,10 +1,10 @@
 import './App.css';
 import {Routes, Route, HashRouter} from "react-router-dom";
 import MainPage from './Component/PagesGloba/MainPage';
-import TestPage from './Component/TestPage';
+import TestPage from './Component/AdditionalPage/TestPage';
 import MathPage from './Component/PageMath/MathPage';
 import LogicPage from './Component/Pagelogic/LogicPage';
-import AboutPage from './Component/AboutPage';
+import AboutPage from './Component/AdditionalPage/AboutPage';
 
 function App() {
   return (

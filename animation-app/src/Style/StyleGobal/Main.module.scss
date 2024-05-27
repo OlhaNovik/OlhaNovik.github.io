@@ -13,27 +13,46 @@
     flex-direction: column;
 }
 
-    .additional_text {
-        @include text_decor(black, 48px, 400);
-        margin: 0;
-        font-family: "Oooh Baby";
-        font-style: italic;
-        margin-left: 30%;
-    }
+.additional_text {
+    @include text_decor(black, 48px, 400);
+    margin: 0;
+    font-family: "Oooh Baby";
+    font-style: italic;
+    margin-left: 30%;
+}
 
 
-.main_text {
-    width: 60%;
+// .main_text {
+//     width: 60%;
+//     // height: 380px;
+//     margin: 0 0 0 92px;
+//     z-index: 0;
+
+//     p {
+//         @include text_decor(black, 96px, 400);
+//         margin: 15px 0 0 0;
+//         font-family: "Playfair Display SC", serif;
+//     }
+
+// }
+.path {
+    opacity: 0;
+}
+
+.main_txt {
+    width: 54%;
     // height: 380px;
     margin: 0 0 0 92px;
     z-index: 0;
+    font-size: 4rem;
+    margin-top: 50px;
 
-    p {
-        @include text_decor(black, 96px, 400);
+    span {
+        display: inline-block;
         margin: 15px 0 0 0;
+        @include text_decor(black, 64px, 400);
         font-family: "Playfair Display SC", serif;
     }
-
 }
 
 .main_img {
@@ -46,74 +65,78 @@
     top: 40px;
 }
 
-@media screen and (max-width: 1390px) {
-    .main_text {
-        p {
-            @include text_decor(black, 86px, 400);
-            margin: 15px 0 0 0;
-            font-family: "Playfair Display SC", serif;
-        }
-    
-    }
-    
-    .main_img {
-        width: 484px;
-        height: 490px;
-        z-index: 2;
-        left: 60%;
-        top: 2%;
-    }
-}
+// @media screen and (max-width: 1390px) {
+//     .main_txt {
+//         span {
+//             @include text_decor(black, 86px, 400);
+//             margin: 15px 0 0 0;
+//             font-family: "Playfair Display SC", serif;
+//         }
 
-@media screen and (max-width: 1210px) {
+//     }
 
-    .main_text {
-        p {
-            @include text_decor(black, 70px, 400);
-            margin: 15px 0 0 0;
-            font-family: "Playfair Display SC", serif;
-        }
-    
-    }
-    .main_img {
-        width: 434px;
-        height: 440px;
-        left: 60%;
-        top: 2%;
-    }
-    .additional_text {
-        @include text_decor(black, 25px, 400);
-        svg{
-            width: 168px;
-            height: 29px;
-        }
+//     .main_img {
+//         width: 484px;
+//         height: 490px;
+//         z-index: 2;
+//         left: 60%;
+//         top: 2%;
+//     }
+// }
 
-    }
+// @media screen and (max-width: 1210px) {
 
-}
+//     .main_txt {
+//         span {
+//             @include text_decor(black, 70px, 400);
+//             margin: 15px 0 0 0;
+//             font-family: "Playfair Display SC", serif;
+//         }
 
-@media screen and (max-width: 1150px) {
+//     }
 
-    .main_text {
-        margin: 0 0 0 40px;
-        
-        p {
-            @include text_decor(black, 45px, 400);
-            margin: 15px 0 0 0;
-            font-family: "Playfair Display SC", serif;
-        }
-    
-    }
-    .main_img {
-        width: 250px;
-        height: 260px;
-        left: 61%;
-        top: 2%;
-    }
+//     .main_img {
+//         width: 434px;
+//         height: 440px;
+//         left: 60%;
+//         top: 2%;
+//     }
+
+//     .additional_text {
+//         @include text_decor(black, 25px, 400);
+
+//         svg {
+//             width: 168px;
+//             height: 29px;
+//         }
+
+//     }
+
+// }
+
+// @media screen and (max-width: 1150px) {
+
+//     .main_txt {
+//         margin: 0 0 0 40px;
+
+//         p {
+//             @include text_decor(black, 45px, 400);
+//             margin: 15px 0 0 0;
+//             font-family: "Playfair Display SC", serif;
+//         }
+
+//     }
+
+//     .main_img {
+//         width: 250px;
+//         height: 260px;
+//         left: 61%;
+//         top: 2%;
+//     }
 
 
 
-}
+// }
 
 
 
@@ -122,24 +145,32 @@
 
 @media screen and (max-width: 450px) {
 
-    .main_text {
-        width: 80%; 
+    .main_txt {
+        width: 70%;
         margin-top: 40px;
-        p {
+        font-size: 2em;
+
+        span {
             @include text_decor(black, 28px, 400);
-            margin: 15px 0 0 0;
-            font-family: "Playfair Display SC", serif;
         }
-    
+
     }
+
     .additional_text {
         margin-left: 45%;
+
+        svg {
+            width: 168px;
+            height: 29px;
+        }
     }
+
     .main_img {
-        left: 13%;
-        top: 25%;
+        left: 10%;
+        top: 30%;
         width: 200px;
         height: 210px;
+        transform: rotate(-20deg);
     }
 
 }

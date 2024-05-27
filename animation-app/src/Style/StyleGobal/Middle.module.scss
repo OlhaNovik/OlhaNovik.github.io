@@ -9,23 +9,28 @@
 }
 
 .text_about {
+    position: relative;
     width: 90%;
-    height: 225px;
-    padding: 1%;
+    height: 245px;
+    padding-top:20px;
     background-color: white;
     border-radius: 100px;
-    @include text_decor(black, 36px, 400);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     display: flex;
+     justify-content:center;
 
-    p {
-        margin: 0 95px 0 95px;
-    }
-
+    
     // text-align: center;
 }
+.container_span{
+    width: 90%;
+    text-align: center;
+    font-size:2em;
+    margin-top: 25px;
+    span{
 
+        @include text_decor(black, 36px, 400);
+     }
+}
 .line {
     width: 1px;
     height: 191px;
@@ -85,11 +90,11 @@ span {
         margin-top: 0;
     }
 
-    .text_about {
-        @include text_decor(black, 25px, 400);
-
-        p {
-            margin: 0 45px 0 45px;
+    .container_span{ 
+        font-size: 2em;
+        span {
+            // margin: 0 45px 0 45px;
+            @include text_decor(black, 25px, 400);
         }
     }
 
@@ -102,9 +107,16 @@ span {
 
 @media screen and (max-width: 450px) {
 
-    .text_about {
-        height: 115px;
-        @include text_decor(black, 16px, 400);
+
+    .text_about{
+         height: 115px;
+    }
+    .container_span{ 
+        font-size: 1em;
+       
+        span{
+            @include text_decor(black, 12px, 400);
+        }    
     }
 
     .text_test {

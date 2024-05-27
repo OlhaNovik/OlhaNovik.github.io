@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import anime from 'animejs';
-import '../Style/WaveAnimation.scss'; 
+import '../../Style/WaveAnimation.scss'; 
 
 const WaveAnimation = () => {
   useEffect(() => {

@@ -1,5 +1,5 @@
-import s from '../Style/AboutPage.module.scss'
-import img_png from '../img/AboutUs.png'
+import s from '../../Style/AboutPage.module.scss'
+import img_png from '../../img/AboutUs.png'
 import WaveAnimation from './WaveAnimation'
 import React, { useEffect } from 'react';
 import anime from 'animejs';

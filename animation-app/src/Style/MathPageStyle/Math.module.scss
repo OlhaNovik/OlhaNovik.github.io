@@ -174,7 +174,10 @@
     border: none;
     margin-top: 60px;
     cursor: pointer;
-}
+    // box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+
+    }
 
 
 .block_icon_one {
@@ -208,6 +211,11 @@
 .head_three{
     width: 100%;
     height: 5px;
+}
+.img_graf{
+    svg{
+        stroke-width: 3;
+    }
 }
 @media screen and (max-width: 450px) {
     .mathpage {

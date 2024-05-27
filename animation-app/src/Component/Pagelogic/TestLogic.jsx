@@ -2,7 +2,7 @@ import s from '../../Style/LogicPageStyle/Logic.module.scss'
 import qwOne from '../../img/que_one_logic.png'
 import qwOneTrue from '../../img/que_one2_logic.png'
 import React, { useState, useRef, useEffect } from 'react';
-import Checkbox from '../CheckBox';
+import Checkbox from '../AdditionalPage/CheckBox';
 import classNames from 'classnames';
 import SubmitButton from '../Pagelogic/ButtonAnimation'
 import anime from 'animejs';

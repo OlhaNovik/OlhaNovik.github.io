@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from '../Style/LogicPageStyle/Logic.module.scss'
+import s from '../../Style/LogicPageStyle/Logic.module.scss'
 
 const Checkbox = ({ id, isChecked, onChange, label }) => {
   return (
