@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e828e4df.css",
-    "main.js": "/static/js/main.4ecdfbe7.js",
+    "main.css": "/static/css/main.d60c3be8.css",
+    "main.js": "/static/js/main.2d289f7e.js",
     "static/js/787.e8e9ca0f.chunk.js": "/static/js/787.e8e9ca0f.chunk.js",
     "static/media/footer_img.png": "/static/media/footer_img.8810206587601d4afcc2.png",
     "static/media/math_logo.png": "/static/media/math_logo.2543482212bfe693e05e.png",
@@ -10,13 +10,15 @@
     "static/media/AboutUs.png": "/static/media/AboutUs.37eaf9f87679e4b448d7.png",
     "static/media/que_one_logic.png": "/static/media/que_one_logic.2d34815f7099a7a08929.png",
     "static/media/que_one2_logic.png": "/static/media/que_one2_logic.b9bae5bacecb3b8a96cc.png",
+    "static/media/three_svg.svg": "/static/media/three_svg.cfb80a1b23caec60b878a3a8fe9e8144.svg",
+    "static/media/x2.svg": "/static/media/x2.218e41bd3cbc589b915cf775accf3de0.svg",
     "index.html": "/index.html",
-    "main.e828e4df.css.map": "/static/css/main.e828e4df.css.map",
-    "main.4ecdfbe7.js.map": "/static/js/main.4ecdfbe7.js.map",
+    "main.d60c3be8.css.map": "/static/css/main.d60c3be8.css.map",
+    "main.2d289f7e.js.map": "/static/js/main.2d289f7e.js.map",
     "787.e8e9ca0f.chunk.js.map": "/static/js/787.e8e9ca0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e828e4df.css",
-    "static/js/main.4ecdfbe7.js"
+    "static/css/main.d60c3be8.css",
+    "static/js/main.2d289f7e.js"
   ]
 }
