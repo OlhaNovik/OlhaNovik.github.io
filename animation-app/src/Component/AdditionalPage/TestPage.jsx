@@ -20,6 +20,7 @@ const TestPage = () => {
         animation = anime.timeline({
             targets: test.listAll,
             delay: anime.stagger(50),
+            // fontSize: "96px",
             loop: false
         });
 
@@ -41,14 +42,11 @@ const TestPage = () => {
     };
     
     return (
-        <div className={s.testmenu}>
-            <div className={s.header_test}>
-                <p>Tests</p>
-            </div>
+
             <div className={s.maintest}>
                 <div className={s.math_block}>
                     <div className={s.foto_math}>
-                        <img className={s.math_photo} src={logoMath} alt="" />
+                        {/* <img className={s.math_photo} src={logoMath} alt="" /> */}
                     </div>
                     <NavLink
                 to="/pageMath"
@@ -67,13 +65,13 @@ const TestPage = () => {
                 onMouseEnter={() => handleMouseEnter("#animateLogic")}
                 onMouseLeave={handleMouseLeave}
             >
-                <p>LOGIC</p>
+                <p className={s.logic_text}>LOGIC</p>
             </NavLink>
-                        <img className={s.logic_photo} src={logoLogic} alt="" />
+                        {/* <img className={s.logic_photo} src={logoLogic} alt="" /> */}
                     </div>
                 </div>
             </div>
-        </div>
+
     );
 }
 

@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import React, { useEffect, useRef } from 'react';
 import anime from 'animejs';
 
-import Letterize from 'letterizejs';
 
 const Middle = () => {
     const buttonRef = useRef(null);
@@ -24,28 +23,34 @@ const Middle = () => {
                 animation
                     .add({
                         rotate: function() {
-                            return anime.random(-360,360)
+                            return anime.random(-360, 360);
                         },
                         translateX: function() {
-                            return anime.random(-500,500)
+                            return anime.random(-500, 500);
                         },
                         translateY: function() {
-                            return anime.random(-500,500)
+                            return anime.random(-500, 500);
                         },
                         duration: 5000,
                         delay: anime.stagger(20),
                     })
                     .add({
-                        rotate:0,
+                        rotate: 0,
                         translateX: 0,
                         translateY: 0,
-                        duration:5000,
+                        duration: 5000,
                         delay: anime.stagger(20)
                     });
             }
         };
-    
-        textAnimation();
+
+        // Виконати анімацію через 15 секунд після завантаження сторінки
+        const timer = setTimeout(() => {
+            textAnimation();
+        }, 15000);
+
+        // Очищення таймера, якщо компонент розмонтується перед виконанням
+        return () => clearTimeout(timer);
     }, []);
 
     useEffect(() => {

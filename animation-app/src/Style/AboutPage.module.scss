@@ -35,3 +35,24 @@
     display: flex;
     margin-bottom: 100px;
 }
+
+@media screen and (max-width: 450px) {
+    .aboutpage {
+        text-align: center;
+        p{
+            @include text_decor(black, 34px, 400);
+        }
+    }
+
+    .text_with_img {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    }
+}

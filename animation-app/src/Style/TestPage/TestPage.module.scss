@@ -1,95 +1,55 @@
 @import '../../Style/GlobalStyle.scss';
 
-.header_test {
-  width: 100%;
-  height: 202px;
-  background-color: $color_blue;
-  text-align: center;
-
-  p {
-    @include text_decor(white, 96px, 400);
-    margin: 0;
-    padding: 0;
-  }
-
-}
-
 .maintest {
-  height: 720px;
   display: flex;
   justify-content: space-around;
-  background-color: $color_back;
+  align-items: center;
+  z-index: 2;
 
   p {
+
     margin: 110px 0 0 0;
     padding: 0;
-    @include text_decor(black, 48px, 200)
+    @include text_decor(black, 48px, 400)
   }
 }
 
 .math_block {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5%;
-}
-
-.math_photo {
-  width: 233px;
-  height: 220px;
-
-}
-
-.foto_logic {
-  margin-top: 200px;
+  z-index: 2;
   position: relative;
+  top: -130px;
+  left: -300px;
+}
+.logic_block{
+  position: relative;
+  top: -130px;
+  left: 250px;
 }
 
-.logic_photo {
-  transform: rotate(25deg);
-  position: absolute;
-  left: 150px;
-  top: -80px;
-  width: 300px;
-  height: 300px;
-}
 
 
 
 @media screen and (max-width: 800px) {
-  .header_test {
-    height: 100px;
-    align-content: center;
-    p{
-      @include text_decor(white, 40px, 400);
-      margin: 0;
-    }
-  }
-
+  
 
   .maintest {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 932px;
-    p {
+    position: relative;
+    top: 300px;
+
+    span {
       @include text_decor(black, 32px, 200);
       margin: 0;
     }
-  }
-  .math_block {
-    margin-top: 60px;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .math_photo {
-    width: 100px;
-    height: 110px;
 
   }
-  .logic_photo {
-    left: 85px;
-    width: 150px;
-    height: 150px;
+  .math_block {
+    top:0;
+    left: 0;
+  }
+  .logic_block{
+    top:0;
+    left: 0;
   }
 }
