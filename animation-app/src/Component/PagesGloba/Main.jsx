@@ -11,8 +11,7 @@ const Main = () => {
             return new Promise((resolve) => {
                 const text = textRef.current;
                 if (text) {
-                    text.innerHTML = text.textContent.replace(/\S/g, "<span class='animated'>$&</span>");
-
+                    text.innerHTML = text.textContent.replace(/\S/g, "<span class='animated'>$&</span>")
                     anime.timeline({ loop: false })
                         .add({
                             targets: '.animated',
@@ -39,7 +38,7 @@ const Main = () => {
                     easing: 'easeInOutSine',
                     duration: 700,
                     delay: (el, i) => i * 500,
-                    complete: (anim) => {
+                    complete: () => {
                         document.querySelectorAll('.path').forEach((path) => {
                             path.setAttribute('fill', 'black');
                             path.setAttribute('stroke', 'none');

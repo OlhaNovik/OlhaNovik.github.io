@@ -116,7 +116,7 @@ const TestMath = () => {
             else{
                 anime({
                     targets: test2,
-                    translateY: -1000,
+                    // translateY: -1000,
                     duration: 1000,
                     easing: 'easeInOutQuad',
                     complete: () => {
@@ -124,7 +124,7 @@ const TestMath = () => {
                       containerR.insertBefore(test2, test3);
                       anime({
                         targets: test2,
-                        translateY: [1000, 0],
+                        // translateY: [1000, 0],
                         duration: 1000,
                         easing: 'easeInOutQuad',
                       });
@@ -154,28 +154,28 @@ const TestMath = () => {
                 });
             }
             else {
-                    anime({
-                        targets: test3,
-                        translateY: -1000,
-                        duration: 1000,
-                        easing: 'easeInOutQuad',
-                        complete: () => {
-                          containerR.insertBefore(test3, test1);
-                          containerR.insertBefore(test3, test2);
-                          anime({
-                            targets: test3,
-                            translateY: [1000, 0],
-                            duration: 1000,
-                            easing: 'easeInOutQuad',
-                          });
-                        }
-                      });
+                    // anime({
+                    //     targets: test3,
+                    //     translateY: -1000,
+                    //     duration: 1000,
+                    //     easing: 'easeInOutQuad',
+                    //     complete: () => {
+                    //     //   containerR.insertBefore(test3, test1);
+                    //     //   containerR.insertBefore(test3, test2);
+                    //       anime({
+                    //         targets: test3,
+                    //         translateY: [1000, 0],
+                    //         duration: 1000,
+                    //         easing: 'easeInOutQuad',
+                    //       });
+                    //     }
+                    //   });
                     // containerR.insertBefore(test3, test1);
                 
             }
 
         }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
 
