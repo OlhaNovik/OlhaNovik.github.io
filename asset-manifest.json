@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d60c3be8.css",
-    "main.js": "/static/js/main.2d289f7e.js",
+    "main.css": "/static/css/main.fcf8df76.css",
+    "main.js": "/static/js/main.7c6427fb.js",
     "static/js/787.e8e9ca0f.chunk.js": "/static/js/787.e8e9ca0f.chunk.js",
     "static/media/footer_img.png": "/static/media/footer_img.8810206587601d4afcc2.png",
     "static/media/math_logo.png": "/static/media/math_logo.2543482212bfe693e05e.png",
@@ -13,12 +13,12 @@
     "static/media/three_svg.svg": "/static/media/three_svg.cfb80a1b23caec60b878a3a8fe9e8144.svg",
     "static/media/x2.svg": "/static/media/x2.218e41bd3cbc589b915cf775accf3de0.svg",
     "index.html": "/index.html",
-    "main.d60c3be8.css.map": "/static/css/main.d60c3be8.css.map",
-    "main.2d289f7e.js.map": "/static/js/main.2d289f7e.js.map",
+    "main.fcf8df76.css.map": "/static/css/main.fcf8df76.css.map",
+    "main.7c6427fb.js.map": "/static/js/main.7c6427fb.js.map",
     "787.e8e9ca0f.chunk.js.map": "/static/js/787.e8e9ca0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d60c3be8.css",
-    "static/js/main.2d289f7e.js"
+    "static/css/main.fcf8df76.css",
+    "static/js/main.7c6427fb.js"
   ]
 }
